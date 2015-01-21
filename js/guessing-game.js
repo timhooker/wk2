@@ -18,3 +18,42 @@
 // guess()
 //
 // Feel free to rename the guessValueAsString parameter
+
+
+// My secret value
+var secretNum = Math.floor(Math.random() * 10) + 1;
+
+function setGuess(guessValueAsString) {
+  guessNum = String(guessValueAsString);
+}
+
+var guessResult = document.createElement("h2");
+
+var guessHigh = document.createTextNode("TOO HIGH");
+var guessLow = document.createTextNode("TOO LOW");
+var guessWin = document.createTextNode("SUCCESS");
+
+function guess() {
+
+  if (guessNum > 10) {
+    alert("guess must be less than or equal to 10");
+    return;
+  } else if (guessNum < 0) {
+    alert("guess cannot be negative");
+    return;
+  }
+
+  guessResult.innerHTML = "";
+  document.querySelector('.guess-result').innerHTML = "";
+
+  if (guessNum > secretNum) {
+    // shoot a little lower
+    guessResult.appendChild(guessHigh);
+  } else if (guessNum < secretNum ) {
+    // try a little higher
+    guessResult.appendChild(guessLow);
+  } else {
+    guessResult.appendChild(guessWin);
+  }
+  document.querySelector('.guess-result').appendChild(guessResult);
+}

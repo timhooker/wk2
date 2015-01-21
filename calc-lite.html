@@ -30,12 +30,27 @@
 
     <input type="text" onchange="setY(this.value)">
 
+    <input type="text" onchange="setZ(this.value)">
+
+
     <!--
     onclick fires whenever the user clicks an element
     -->
     <button onclick="add()">+</button>
 
     <button onclick="subtract()">-</button>
+
+    <button onclick="multiply()">*</button>
+
+    <button onclick="divide()">/</button>
+
+    <button onclick="mod()">%</button>
+    <p>
+      the results are:
+    </p>
+    <h2 class="compute-result">
+
+    </h2>
 
     <script src="js/calc-lite.js"></script>
 

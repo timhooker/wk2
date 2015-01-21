@@ -7,15 +7,16 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
   </head>
-  <body>
-    <h1>Guess a number from 1 - 10</h1>
+  <body class="guess-page">
+    <div class="guess-content">
 
-    <h2 class="guess-result"></h2>
-
-    <p>
-      <input type="text" onchange="setGuess(this.value)">
-      <button onclick="guess()">Guess!</button>
-    </p>
+      <h1>Guess a number from 1 - 10</h1>
+      <p>
+        <input type="text" onchange="setGuess(this.value)">
+        <button onclick="guess()">Guess!</button>
+      </p>
+      <div class="guess-result"></div>
+    </div>
 
     <script src="js/guessing-game.js"></script>
 

@@ -14,7 +14,11 @@ h5 { font-size: .83em; margin: 1.5em 0 }
 h6 { font-size: .75em; margin: 1.67em 0 }
 h1, h2, h3, h4,
 h5, h6 {
-  font-weight: bolder
+  font-weight: bold;
+}
+
+h1 {
+  text-transform: uppercase;
 }
 
 p {
@@ -32,6 +36,12 @@ button, input, select, textarea {
   outline: none;
 }
 
+body {
+  text-align: center;
+  background-color: #4c4c4e;
+  color: #fff;
+
+}
 button {
   padding: 0.5em 1em;
   background: #2694f5;
@@ -42,4 +52,91 @@ button {
 input {
   padding: 0.5em;
   border: 1px solid #999;
+}
+
+button {
+  background-color: deeppink;
+}
+
+.guess-page {
+  text-transform: uppercase;
+}
+
+.guess-content {
+  width: 60%;
+  margin: 25% auto;
+  text-align: center;
+}
+.guess-page h1 {
+  font-weight: 400;
+}
+
+@keyframes moveit {
+  from {
+    opacity: 0;
+
+  }
+
+  to {
+    opacity: 1;
+
+  }
+}
+
+@-webkit-keyframes moveit {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+    transform: rotate(1turn);
+  }
+}
+
+
+.guess-result h2,
+.result-box h2 {
+  padding: 1em;
+  animation: moveit .38s linear;
+  -webkit-animation: moveit .38s linear;
+}
+
+.compute-result {
+  padding: 2em;
+  border: 5px solid white;
+  width: 15em;
+  height: 5em;
+  margin: 2em auto;
+  box-sizing: border-box;
+}
+
+.the-result {
+  animation: moveit .38s linear;
+  -webkit-animation: moveit .38s linear;
+}
+
+.conversions-content {
+  margin: 15% auto 0 auto;
+  width: 40em;
+  position: relative;
+}
+
+.conversions-page-inputs {
+  text-align: right;
+  vertical-align: top;
+}
+
+.result-box {
+  width: 16em;
+  height: 16em;
+  float: right;
+  margin-left: 1em;
+  position: relative;
+  border: 5px solid #fff;
+  background-color:
+}
+
+.result-box h2 {
+  line-height: 1.2em;
 }
